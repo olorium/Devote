@@ -26,49 +26,63 @@ struct ContentView: View {
 	// MARK: - Body
 	var body: some View {
 		NavigationView {
-			VStack {
-				VStack(spacing: 16) {
-					TextField("New Task", text: $task)
+			ZStack {
+				VStack {
+					VStack(spacing: 16) {
+						TextField("New Task", text: $task)
+							.padding()
+							.background(Color(UIColor.systemGray6))
+							.cornerRadius(10)
+						Button {
+							addItem()
+						} label: {
+							Spacer()
+							Text("SAVE")
+							Spacer()
+						}
+						.disabled(isButtonDisabled)
 						.padding()
-						.background(Color(UIColor.systemGray6))
+						.font(.headline)
+						.foregroundColor(.white)
+						.background(isButtonDisabled ? Color.gray : Color.pink)
 						.cornerRadius(10)
-					Button {
-						addItem()
-					} label: {
-						Spacer()
-						Text("SAVE")
-						Spacer()
 					}
-					.disabled(isButtonDisabled)
 					.padding()
-					.font(.headline)
-					.foregroundColor(.white)
-					.background(isButtonDisabled ? Color.gray : Color.pink)
-					.cornerRadius(10)
-				}
-				.padding()
-				List {
-					ForEach(items) { item in
-						VStack(alignment: .leading) {
-							Text(item.task ?? "")
-								.font(.headline)
-								.fontWeight(.bold)
-							Text("Item at \(item.timestamp!, formatter: Constant.itemFormatter)")
-								.font(.footnote)
-								.foregroundColor(.gray)
-							
+					List {
+						ForEach(items) { item in
+							VStack(alignment: .leading) {
+								Text(item.task ?? "")
+									.font(.headline)
+									.fontWeight(.bold)
+								Text("Item at \(item.timestamp!, formatter: Constant.itemFormatter)")
+									.font(.footnote)
+									.foregroundColor(.gray)
+								
+							}
+						}
+						.onDelete(perform: deleteItems)
+						if items.isEmpty {
+							Spacer()
+								.listRowBackground(Color.clear)
 						}
 					}
-					.onDelete(perform: deleteItems)
-				}
-				.navigationTitle("Daily Tasks")
-				.toolbar {
-					ToolbarItem(placement: .navigationBarTrailing) {
-						EditButton()
-					}
+					.listStyle(.insetGrouped)
+					.scrollContentBackground(.hidden)
+					.background(Color.clear)
+					.shadow(color: .black.opacity(0.3), radius: 12)
+					.padding(.vertical, 0)
+					.frame(maxWidth: 640)
 				}
 			}
-		}
+			.navigationTitle("Daily Tasks")
+			.toolbar {
+				ToolbarItem(placement: .navigationBarTrailing) {
+					EditButton()
+				}
+			}
+			.background(BackgroundImageView())
+			.background(Constant.backgroundGradient.ignoresSafeArea())
+		}.navigationViewStyle(StackNavigationViewStyle())
 	}
 	
 	// MARK: - Methods

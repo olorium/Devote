@@ -5,7 +5,7 @@
 //  Created by Oleksii Vasyliev on 11.04.2023.
 //
 
-import Foundation
+import SwiftUI
 
 enum Constant {
 	
@@ -19,6 +19,10 @@ enum Constant {
 	}()
 	
 	// MARK: - UI
+	
+	static var backgroundGradient: LinearGradient {
+		LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+	}
 	
 	// MARK: - UX
 }

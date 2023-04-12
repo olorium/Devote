@@ -18,6 +18,7 @@
 		8BB273F929E5E1FC005A25DF /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BB273F629E5E1FC005A25DF /* sound-tap.mp3 */; };
 		8BB2740629E5EC89005A25DF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2740529E5EC89005A25DF /* Constant.swift */; };
 		8BB2740829E737C0005A25DF /* View+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2740729E737C0005A25DF /* View+ext.swift */; };
+		8BB2740A29E74028005A25DF /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2740929E74028005A25DF /* BackgroundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8BB2740029E5E2C7005A25DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8BB2740529E5EC89005A25DF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8BB2740729E737C0005A25DF /* View+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ext.swift"; sourceTree = "<group>"; };
+		8BB2740929E74028005A25DF /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB273E329E5E128005A25DF /* ContentView.swift */,
+				8BB2740929E74028005A25DF /* BackgroundImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB273EB29E5E129005A25DF /* Persistence.swift in Sources */,
+				8BB2740A29E74028005A25DF /* BackgroundImageView.swift in Sources */,
 				8BB273E429E5E128005A25DF /* ContentView.swift in Sources */,
 				8BB2740629E5EC89005A25DF /* Constant.swift in Sources */,
 				8BB273EE29E5E129005A25DF /* Devote.xcdatamodeld in Sources */,
@@ -353,7 +357,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,7 +387,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
