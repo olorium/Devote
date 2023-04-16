@@ -40,6 +40,8 @@ struct ContentView: View {
 							.background(Capsule().stroke(Color.white, lineWidth: 2))
 						Button {
 							isDarkMode.toggle()
+							Player().shared.playSound(sound: "sound-tap", type: "mp3")
+							Constant.feedback.notificationOccurred(.success)
 						} label: {
 							Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
 								.resizable()
@@ -55,6 +57,8 @@ struct ContentView: View {
 					
 					Button {
 						showNewTaskItem = true
+						Player().shared.playSound(sound: "sound-ding", type: "mp3")
+						Constant.feedback.notificationOccurred(.success)
 					} label: {
 						Image(systemName: "plus.circle")
 							.font(.system(size: 30, weight: .semibold, design: .rounded))

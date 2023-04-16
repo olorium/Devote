@@ -25,4 +25,6 @@ enum Constant {
 	}
 	
 	// MARK: - UX
+	
+	static let feedback = UINotificationFeedbackGenerator()
 }
