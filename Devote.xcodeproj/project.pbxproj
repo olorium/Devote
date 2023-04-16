@@ -20,6 +20,8 @@
 		8B7E618329EC53BB007C69ED /* DevoteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8B7E617329EC53B9007C69ED /* DevoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8B7E618829EC577D007C69ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB273E529E5E129005A25DF /* Assets.xcassets */; };
 		8B7E618929EC5814007C69ED /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2740529E5EC89005A25DF /* Constant.swift */; };
+		8B7E618E29EC69F0007C69ED /* devote1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7E618C29EC69F0007C69ED /* devote1.jpg */; };
+		8B7E618F29EC69F0007C69ED /* devote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7E618D29EC69F0007C69ED /* devote.jpg */; };
 		8BB273E229E5E128005A25DF /* DevoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB273E129E5E128005A25DF /* DevoteApp.swift */; };
 		8BB273E429E5E128005A25DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB273E329E5E128005A25DF /* ContentView.swift */; };
 		8BB273E629E5E129005A25DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB273E529E5E129005A25DF /* Assets.xcassets */; };
@@ -71,6 +73,9 @@
 		8B7E617C29EC53B9007C69ED /* DevoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevoteWidget.swift; sourceTree = "<group>"; };
 		8B7E617E29EC53BA007C69ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B7E618029EC53BA007C69ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7E618A29EC5EDC007C69ED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B7E618C29EC69F0007C69ED /* devote1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = devote1.jpg; sourceTree = "<group>"; };
+		8B7E618D29EC69F0007C69ED /* devote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = devote.jpg; sourceTree = "<group>"; };
 		8BB273DE29E5E128005A25DF /* Devote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB273E129E5E128005A25DF /* DevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevoteApp.swift; sourceTree = "<group>"; };
 		8BB273E329E5E128005A25DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,9 +132,20 @@
 			path = DevoteWidget;
 			sourceTree = "<group>";
 		};
+		8B7E618B29EC5EE1007C69ED /* Readme */ = {
+			isa = PBXGroup;
+			children = (
+				8B7E618D29EC69F0007C69ED /* devote.jpg */,
+				8B7E618C29EC69F0007C69ED /* devote1.jpg */,
+			);
+			path = Readme;
+			sourceTree = "<group>";
+		};
 		8BB273D529E5E128005A25DF = {
 			isa = PBXGroup;
 			children = (
+				8B7E618B29EC5EE1007C69ED /* Readme */,
+				8B7E618A29EC5EDC007C69ED /* README.md */,
 				8BB273E029E5E128005A25DF /* Devote */,
 				8B7E617929EC53B9007C69ED /* DevoteWidget */,
 				8B7E617429EC53B9007C69ED /* Frameworks */,
@@ -321,6 +337,8 @@
 				8BB273F729E5E1FC005A25DF /* sound-rise.mp3 in Resources */,
 				8BB273E929E5E129005A25DF /* Preview Assets.xcassets in Resources */,
 				8BB273F929E5E1FC005A25DF /* sound-tap.mp3 in Resources */,
+				8B7E618F29EC69F0007C69ED /* devote.jpg in Resources */,
+				8B7E618E29EC69F0007C69ED /* devote1.jpg in Resources */,
 				8BB273E629E5E129005A25DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
