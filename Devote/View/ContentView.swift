@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
 	// MARK: - Properties
+	@AppStorage("isDarkMode") private var isDarkMode = false
 	@State var task: String = ""
 	@State private var showNewTaskItem: Bool = false
 	
@@ -26,6 +27,30 @@ struct ContentView: View {
 		NavigationView {
 			ZStack {
 				VStack {
+					HStack(spacing: 10) {
+						Text("Devote")
+							.font(.largeTitle)
+							.fontWeight(.heavy)
+							.padding(.leading, 4)
+						Spacer()
+						EditButton()
+							.font(.system(size: 16, weight: .semibold, design: .rounded))
+							.padding(.horizontal, 10)
+							.frame(minWidth: 70, minHeight: 24)
+							.background(Capsule().stroke(Color.white, lineWidth: 2))
+						Button {
+							isDarkMode.toggle()
+						} label: {
+							Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
+								.resizable()
+								.frame(width: 24, height: 24)
+								.font(.title)
+						}
+
+					}
+					.padding()
+					.foregroundColor(.white)
+					
 					Spacer(minLength: 80)
 					
 					Button {
@@ -82,11 +107,7 @@ struct ContentView: View {
 				}
 			}
 			.navigationTitle("Daily Tasks")
-			.toolbar {
-				ToolbarItem(placement: .navigationBarTrailing) {
-					EditButton()
-				}
-			}
+			.navigationBarHidden(true)
 			.background(BackgroundImageView())
 			.background(Constant.backgroundGradient.ignoresSafeArea())
 		}.navigationViewStyle(StackNavigationViewStyle())
