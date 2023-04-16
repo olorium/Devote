@@ -8,5 +8,5 @@
 ## App Screenshots
 
 <img src="./Readme/devote1.jpg" height="375"/>
-<img src="./Readme/devote2.jpg" height="375"/>
+<img src="./Readme/devote.jpg" height="375"/>
 
